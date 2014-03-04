@@ -5,6 +5,8 @@
  * Date: 16.09.13.
  * Time: 09:08
  */
+
+
 class Proodos_OutOfStock_Block_Collection extends Mage_Catalog_Block_Product_List
 {
     protected $_productCollection;

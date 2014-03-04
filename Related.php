@@ -1,5 +1,6 @@
 <?php
 
+
 class AW_Blog_Block_Manage_Blog_Edit_Tab_Related extends Mage_Adminhtml_Block_Widget_Grid
 {
     public function __construct()

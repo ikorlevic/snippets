@@ -10,6 +10,7 @@ class Proodos_ProductsAction_IndexController extends Mage_Core_Controller_Front_
 {
     public function indexAction()
     {
+
         $this->loadLayout();
         $this->getLayout()->getBlock('head')->setTitle('Proizvodi na akciji');
 

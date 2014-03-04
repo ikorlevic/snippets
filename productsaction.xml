@@ -1,4 +1,5 @@
-<?xml version="1.0"?><layout version="0.1.0">
+<?xml version="1.0"?>
+<layout version="0.1.0">
     <proizvodi-na-akciji_index_index>
         <reference name="breadcrumbs">
             <action method="addCrumb">
