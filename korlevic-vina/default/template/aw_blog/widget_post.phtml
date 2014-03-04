@@ -1,0 +1,18 @@
+<?php if ($posts = $this->getRecent()): ?>
+	<div class="widget-latest">
+  		<h2><?php echo Mage::helper('blog')->__('Latest Posts');?></h2>
+		
+		<ul>
+		<?php foreach ($posts as $post): ?>
+			<li>
+			<span class="date"><?php $_ct= new Zend_Date($post->getCreatedTime());
+      				echo $_ct->toString('m.d.y'); ?> </span>
+			<a href="<?php echo $post->getAddress(); ?>" ><?php echo $post->getTitle();?></a>
+			
+<!--			<span><?php // echo $post->getData('short_content')?></span>-->
+			</li>
+		
+		<?php endforeach; ?>
+       	</ul>
+	</div>
+<?php endif; ?>
