@@ -1,0 +1,39 @@
+<?xml version="1.0"?><layout version="0.1.0">
+    <proizvodi-na-akciji_index_index>
+        <reference name="breadcrumbs">
+            <action method="addCrumb">
+                <name>home</name>
+                <params>
+                    <label>Naslovnica</label>
+                    <title>Naslovnica</title>
+                    <link>home</link>
+                </params>
+            </action>
+            <action method="addCrumb">
+                <name>proizvodi-na-akciji</name>
+                <params>
+                    <label>Proizvodi na akciji</label>
+                    <title>Proizvodi na akciji</title>
+                    <!--<link>proizvodi-na-akciji</link>-->
+                </params>
+            </action>
+        </reference>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-left.phtml</template>
+            </action>
+        </reference>
+        <reference name="left">
+            <block type="ultramegamenu/navigation" name="infortis.vertnav" template="infortis/ultramegamenu/categories.phtml" before="-" />            <block type="catalog/layer_view" name="catalog.leftnav" after="infortis.vertnav" template="catalog/layer/view.phtml"/>        </reference>
+        <reference name="content">
+            <block type="proizvodi-na-akciji/collection" name="product_list" template="productsaction/list.phtml">                <block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">                    <block type="page/html_pager" name="product_list_toolbar_pager"/>                    <!--<action method="setDefaultListPerPage"><limit>4</limit></action>-->                    <!--<action method="setDefaultGridPerPage"><limit>9</limit></action>-->                    <!--<action method="addPagerLimit"><mode>list</mode><limit>2</limit></action>-->                    <!--<action method="addPagerLimit"><mode>list</mode><limit>4</limit></action>-->                    <!--<action method="addPagerLimit"><mode>list</mode><limit>6</limit></action>-->                    <!--<action method="addPagerLimit"><mode>list</mode><limit>8</limit></action>-->                    <!--<action method="addPagerLimit" translate="label"><mode>list</mode><limit>all</limit></action>-->                </block>                <action method="addColumnCountLayoutDepend"><layout>empty</layout><count>6</count></action>                <action method="addColumnCountLayoutDepend"><layout>one_column</layout><count>5</count></action>                <action method="addColumnCountLayoutDepend"><layout>two_columns_left</layout><count>4</count></action>                <action method="addColumnCountLayoutDepend"><layout>two_columns_right</layout><count>4</count></action>                <action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>3</count></action>
+            <action method="setToolbarBlockName">
+                <name>product_list_toolbar</name>
+            </action>
+        <action method="setColumnCount">
+        <count>3</count>
+    </action>
+    </block>
+    </reference>
+    </proizvodi-na-akciji_index_index>
+</layout>
